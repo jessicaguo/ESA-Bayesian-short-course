@@ -3,7 +3,9 @@ This is the repo for Introduction to Bayesian and Hierarchical Bayesian Modeling
 
 ### Organizers
 [Drew Peltier](mailto:dmp334@nau.edu), Northern Arizona University
+
 [Jessica Guo](mailto:jessicaguo@email.arizona.edu), University of Arizona
+
 [Robert Shriver](mailto:rshriver@unr.edu), University of Nevada - Reno
 
 ### Schedule
