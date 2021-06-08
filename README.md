@@ -11,7 +11,7 @@ This is the repo for Introduction to Bayesian and Hierarchical Bayesian Modeling
 ### Schedule
 
 ### Pre-workshop instructions
-If you would like to follow along
+Software requirements include JAGS and R/RStudio. 
 
 Alternatively, launch a virtual RStudio session here:
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jessicaguo/ESA-Bayesian-short-course.git/main?urlpath=rstudio)
