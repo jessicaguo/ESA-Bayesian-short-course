@@ -20,7 +20,7 @@ Alternatively, launch a virtual RStudio session here:
 | Time  | Topic/activity   |  Instructor	 |
 |---|---| ---|
 | 7:00 - 7:20  | Introductions and workshop overview  | Drew |
-| 7:20 - 7:55 | Why Bayesian? An introduction and motivation example | Jessica | 
+| 7:20 - 7:55 | Why Bayesian? An introduction and motivating example | Jessica | 
 | 7:55 - 8:00  | BREAK  | |
 | 8:00 - 8:35  | Probability, Bayes' rule, and hierarchical modeling  | Bob |
 | 8:35 - 9:30 | Demonstration of a hierarchical regression: JAGS model code and diagnostics  | Drew |
