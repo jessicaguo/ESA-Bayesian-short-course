@@ -10,6 +10,12 @@ This is the repo for Introduction to Bayesian and Hierarchical Bayesian Modeling
 
 [Robert Shriver](mailto:rshriver@unr.edu), University of Nevada - Reno
 
+### Pre-workshop instructions
+Software requirements include JAGS and R/RStudio. 
+
+Alternatively, launch a virtual RStudio session here:
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jessicaguo/ESA-Bayesian-short-course.git/main?urlpath=rstudio)
+
 ### Schedule
 | Time  | Topic/activity   |  Instructor	 |
 |---|---| ---|
@@ -24,8 +30,3 @@ This is the repo for Introduction to Bayesian and Hierarchical Bayesian Modeling
 | 12:40 - 1:00  | Discussion of group projects and different modelling approaches  | Drew |
 | 1:00 - 1:30  | Closing remarks and where to go from here: further resources, books, and software  | Bob & Drew |
 
-### Pre-workshop instructions
-Software requirements include JAGS and R/RStudio. 
-
-Alternatively, launch a virtual RStudio session here:
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jessicaguo/ESA-Bayesian-short-course.git/main?urlpath=rstudio)
