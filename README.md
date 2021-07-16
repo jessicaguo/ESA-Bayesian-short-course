@@ -11,7 +11,7 @@ This is the repo for Introduction to Bayesian and Hierarchical Bayesian Modeling
 [Robert Shriver](mailto:rshriver@unr.edu), University of Nevada - Reno
 
 ### Pre-workshop instructions
-Software requirements include [JAGS](https://sourceforge.net/projects/mcmc-jags/) and [R](https://www.r-project.org)/[RStudio](https://www.rstudio.com/products/rstudio/download/). 
+Software requirements include [JAGS](https://sourceforge.net/projects/mcmc-jags/) and [R](https://www.r-project.org)/[RStudio](https://www.rstudio.com/products/rstudio/download/). Required R packages include 'rjags', 'coda', 'ggplot2', and 'mcmcplots'. 
 
 Alternatively, launch a virtual RStudio session here:
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jessicaguo/ESA-Bayesian-short-course.git/main?urlpath=rstudio)

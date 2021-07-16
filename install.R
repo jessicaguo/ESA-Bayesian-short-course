@@ -1,4 +1,4 @@
 install.packages("rjags")
 install.packages("coda")
-install.packages("ggplot2")
+install.packages("tidyverse")
 install.packages("mcmcplots")
