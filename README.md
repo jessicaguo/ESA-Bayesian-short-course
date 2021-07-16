@@ -32,7 +32,5 @@ Alternatively, launch a virtual RStudio session here:
 | 10:00 - 10:10  | Description of datasets for group activity | Jessica |
 | 10:10 - 12:40 | Working groups (form groups of 4-5 participants each)  | All |
 | 12:40 - 1:00  | Discussion of group projects and different modelling approaches  | Drew |
-| 1:00 - 1:30  | Closing remarks and where to go from here: further resources, books, and software  | Bob & Drew |
+| 1:00 - 1:30  | Closing remarks and where to go from here: [further resources](https://docs.google.com/document/d/1_4Nox5Xaz_5vyRfzW7hhzAdEtOmyu1D0xf8__wVXsug/edit?usp=sharing), software options, and future possibilities  | Bob & Drew |
 
-### Additional resources
-[Google doc](https://docs.google.com/document/d/1_4Nox5Xaz_5vyRfzW7hhzAdEtOmyu1D0xf8__wVXsug/edit?usp=sharing) of additional resources. Please share any resources that others may also find helpful!
