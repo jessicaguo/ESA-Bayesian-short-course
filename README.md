@@ -1,7 +1,9 @@
 # ESA Bayesian short course
 This is the repo for Introduction to Bayesian and Hierarchical Bayesian Modeling Applications in Ecology, a short course offered at the 2021 Ecological Society of America Annual Meeting. We will convene on Friday, August 6th, 2021 from 7 AM to 1:30 PM Pacific Time. 
 
-[Here](https://hackmd.io/4JyUE4X0QKyD8rlt9Oim5g?both) is the link to the collaborative note-taking document. 
+If you haven't already, please consider completing the [pre-workshop survey](https://docs.google.com/forms/d/1TjvG_zAhbwoAcc1rD4YCDBpPzXKe-fGpVugXAuAxzB4/edit). 
+
+We will collaboratively take notes [here](https://hackmd.io/4JyUE4X0QKyD8rlt9Oim5g?both). 
 
 ### Organizers
 [Drew Peltier](mailto:dmp334@nau.edu), Northern Arizona University
@@ -22,7 +24,7 @@ Alternatively, launch a virtual RStudio session here:
 | Time  | Topic/activity   |  Instructor	 |
 |---|---| ---|
 | 7:00 - 7:20  | Introductions and workshop overview  | Drew |
-| 7:20 - 7:55 | Why Bayesian? An introduction and motivating example | Jessica | 
+| 7:20 - 7:55 | [Why Bayesian? An introduction and motivating example](https://docs.google.com/presentation/d/1xd1tajEZvIRrNZRlAdJ2UbikjKXJmL-BQE65OAdqk5o/edit?usp=sharing) | Jessica | 
 | 7:55 - 8:00  | BREAK  | |
 | 8:00 - 8:35  | Probability, Bayes' rule, and hierarchical modeling  | Bob |
 | 8:35 - 9:30 | Demonstration of a hierarchical regression: JAGS model code and diagnostics  | Drew |
@@ -32,3 +34,5 @@ Alternatively, launch a virtual RStudio session here:
 | 12:40 - 1:00  | Discussion of group projects and different modelling approaches  | Drew |
 | 1:00 - 1:30  | Closing remarks and where to go from here: further resources, books, and software  | Bob & Drew |
 
+### Additional resources
+[Google doc](https://docs.google.com/document/d/1_4Nox5Xaz_5vyRfzW7hhzAdEtOmyu1D0xf8__wVXsug/edit?usp=sharing) of additional resources. Please share any resources that others may also find helpful!
