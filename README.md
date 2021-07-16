@@ -15,6 +15,7 @@ Software requirements include JAGS and R/RStudio.
 
 Alternatively, launch a virtual RStudio session here:
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jessicaguo/ESA-Bayesian-short-course.git/main?urlpath=rstudio)
+*Note*: Binder instances are hosted virtually. Your edits can be saved, but must be exported to your local machine. Avoid closing the Binder instance until the end of the workshop. 
 
 ### Schedule
 | Time  | Topic/activity   |  Instructor	 |
