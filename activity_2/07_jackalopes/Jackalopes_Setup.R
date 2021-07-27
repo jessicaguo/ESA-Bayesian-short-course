@@ -24,7 +24,7 @@ library(rjags)
 data<-list(Nt=log(Nt), Nt_1=log(Nt_1), N=length(Nt))
 
 
-jm1 <- jags.model("jackslope_JagsStarter.R", data=data, n.chains = 3, n.adapt=1000)
+jm1 <- jags.model("jackalope_JagsStarter.R", data=data, n.chains = 3, n.adapt=1000)
 
 # Now update the JaGS model and save/monitor quantities of interest:
 jm_coda1 <- coda.samples(jm1, variable.names = c("a", "b", "sig", 'k'), n.iter=5000)
