@@ -1,0 +1,235 @@
+---
+title: "RATS"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Rats: hierarchical linear regression
+
+This example is taken from the openBUGS example library, originally from section 6 of Gelfand et al (1990), and concerns 30 young rats whose weights were measured weekly for five weeks.
+
+The goal of this example is to give everyone a look at what fitting a model in JAGS looks like, (the nuts and bolts) but also a little bit of hierarchical modelling. We'll start with a single regression model, and then add one level of hierarchy: a population intercept and a population slope. 
+
+Let's look at the data, which we first have to load:
+
+```{r}
+Weights <- read.csv("GiantRats.csv",header=T)
+head(Weights)
+
+data <- list(x = c(8.0, 15.0, 22.0, 29.0, 36.0), xbar = 22, N = 30, T = 5,
+             Y = Weights)
+```
+Here, x is time (days), N is the number of rats, T is the number of time points (5), and Y are the rat weights.
+
+
+
+This is a single rat's weight over the 5 week period.
+```{r,echo=FALSE}
+plot(data$x,data$Y[1,],type="b",xlab="Day", ylab="Weight",
+     bty="l",tck=0.02,las=1,xlim=c(0,40),ylim=c(100,400))
+```
+
+You can see there is some variation for the other rats, but a similar shape
+```{r, echo=FALSE}
+plot(data$x,data$Y[1,],type="b",xlab="Day", ylab="Weight",
+     bty="l",tck=0.02,las=1,xlim=c(0,40),ylim=c(100,400))
+colors<-rainbow(29)
+
+for(i in 2:30){
+  points(data$x,data$Y[i,],type="b",col=colors[i])
+}
+
+```
+
+
+#OK, so let's look at the model
+We would like to quantify the mean rate of growth of the rats per week, that is, we want to quantify the slope. So, we will fit a simple linear regression.
+
+First is the likelihood and mean model:
+
+##none of this model code is runnable here! !
+It's located in a separate file "RATS_model.R"
+```{r, eval=FALSE}
+model{ #all of this is wrapped in a "model" loop
+  # specify likelihood of each data component by looping through all
+  # elements of the data (weights, Y), which is read-in as a matrix,
+  # so need to loop through each row (rat) and each column (timepoints):
+  for(i in 1:N){ #loop across rats
+    for(j in 1:T){ #loop across time points (weeks)
+      Y[i,j] ~ dnorm(mu[i,j], tau) # this is the likelihood (distribution of observations)
+      #we choose a normal liklihood bc assume data are normally distributed.
+      mu[i,j] <- alpha + beta*(x[j] - xbar) # this is the regression ("mean model")
+    }
+  }
+  ....
+}
+```
+
+Next, we have to assign prior distributions to the stochastic parameters
+```{r,eval=FALSE}
+....
+# Conjugate, relatively non-informative priors to root 
+  # nodes (population parameters)
+  alpha ~ dnorm(0,0.00001)
+  beta ~ XXX #what goes here?
+  tau ~ dgamm(0.01,0.01) #this is a precision (simply the inverse of the variance)
+ 
+  sigma <- 1/sqrt(tau) # convert the precision to a standard deviation
+}
+```
+
+# beta ~ ??? --> Please take a minute to think about what this should be.
+# What is beta?
+
+
+
+
+
+
+
+#let's look at the whole model
+
+```{r, eval=FALSE}
+model{
+  #likelihood and mean model
+  for(i in 1:N){
+    for(j in 1:T){
+      Y[i,j] ~ dnorm(mu[i,j], tau)
+      mu[i,j] <- alpha + beta*(x[j] - xbar)
+    }
+  }
+  #prior distributions
+  alpha ~ dnorm(0,0.00001)
+  beta ~ dnorm(0,0.00001) 
+  tau ~ dgamma(0.01, 0.01) #this is called a "confugate prior". Allows gibbs sampling.
+  sigma <- 1/sqrt(tau)
+}
+```
+
+#Before we run the model, let's add a level of hierarchy
+Want to quantify growth rates and intercepts for each rat, as well as overall means. Random-intercepts, random-slopes model.
+```{r,eval=FALSE}
+model{
+  for(i in 1:N){
+    for(j in 1:T){
+      Y[i,j] ~ dnorm(mu[i,j], tau)
+      mu[i,j] <- alpha[i] + beta[i]*(x[j] - xbar) #notice, we now have one intercept and slope for each rat, i. 
+    }
+  }
+  ...
+}
+```
+
+
+So what do priors look like now?
+```{r,eval=FALSE}
+...
+  #prior distributions#
+    #hierarchical priors
+  for(i in 1:N){
+    alpha[i] ~ dnorm(mu.alpha, tau.alpha)
+    beta[i] ~ ???
+  }
+    #root, or global priors
+  mu.alpha ~ dnorm(0,0.001)
+  mu.beta ~ ???
+    #precisions
+  tau ~ dgamma(0.01,0.01)
+  tau.alpha ~ ???
+  tau.beta ~ ???
+  
+  # Calculate standard deviations associated with each
+  # precition:
+  sigma <- 1/sqrt(tau)
+  sigma.alpha <- ???
+  sigma.beta <- ???
+
+}
+```
+
+
+#Everyone take a minute or two to think about how to fill in the blanks (???)
+
+#Any questions so far?
+This model (above) will be saved in a .R file called "RATS_Hmodel.R". There is also a "RATS_model.R" which is non-hierarchical, the first version we looked at. We can call either model in as part of the JAGS model run.
+
+#Final step before we run the model 
+Need to provide intial values to the stochastic parameters (anything with a prior distribution).
+#Which parameters need initial values?
+Specify initials for root nodes, for 3 MCMC chains as a list of lists:
+```{r, eval=FALSE}
+inits = list(
+  list(mu.alpha = 1, mu.beta = 0, tau=1,tau.alpha=1,tau.beta=1),
+  list(mu.alpha = xx, mu.beta = xx, tau=0.5,tau.alpha=2,tau.beta=0.5),
+  list(mu.alpha = xx, mu.beta = xx, tau=2,tau.alpha=0.5,tau.beta=2))
+```
+
+```{r}
+inits = list(
+  list(mu.alpha = 1, mu.beta = 0, tau=1,tau.alpha=1,tau.beta=1),
+  list(mu.alpha = 5, mu.beta = 0, tau=0.5,tau.alpha=2,tau.beta=0.5),
+  list(mu.alpha = 0.5, mu.beta = 0, tau=2,tau.alpha=0.5,tau.beta=2))
+```
+
+# Run the hierarchical model
+Need to provide the function with data, initial values, number of chains (more on this shortly), and adaptive iterations.
+#Let's look at how that works first
+The model will run three parallel MCMC chains. MCMC stands for Markov chain Monte Carlo, ie, the chains proceed at each iteration by random sampling from distributions, followed by acceptance or rejection of proposed samples, and adjustment of the sampling distributions. This is akin to maximum likelihood estimation, except that the sampling algorithms "under the hood" vary according to the model selected. Different programs openBUGS, JAGS, Stan, have different available sampling algorithms. These are, for the most part, not something the user interacts with in any way, that is, this is automated.
+
+Here, we will just define the model and sample it for 10 iterations
+(Note the n.adapt here is way too short, but this is useful for this example)
+```{r}
+library(rjags) #this package interfaces between R and JAGS
+Rats_model <- jags.model("RATS_Hmodel.R", data=data, inits=inits, n.chains = 3, n.adapt=1)
+burnin_samples <- coda.samples(Rats_model,variable.names = c("mu.beta"),n.iter=10)
+plot(burnin_samples)
+```
+#This model has not converged, yet.
+What you see on the left is the value of the "mu.beta" parameter for each of three chains (black, red, green) at each iteration up to 10 along the x-axis. This is a trace plot, or history plot, and shows how the chains are moving through parameter space.
+
+On the right is the density plot, a histogram which shows the distribution of samples for mu.beta.
+
+Two things show the model is not yet converged:
+1) Depending on which iterations along the x-axis you look at, the mean of all three is different.This is shown by a wobbly density plot.
+2) Different chains are doing different things. They don't agree. This is why we start the three chains in different places.
+
+#Let's run the model longer:
+(Note the much more realistic n.adapt=1000)
+```{r}
+Rats_model <- jags.model("RATS_Hmodel.R", data=data, inits=inits, n.chains = 3, n.adapt=500)
+converged_samples <- coda.samples(Rats_model,variable.names = c("mu.beta"),n.iter=1000)
+plot(converged_samples) #base R method to plot output. Flexible but less user-friendly.
+```
+#this model is now converged.
+We ran many more samples, but you'll notice that the mean is stable across iterations, and the chains agree on the mean (and uncertainty).
+
+#Let's sample the rest of the parameters, and let's monitor the deviance.
+
+```{r}
+load.module("dic") #loads the DIC module
+full_coda <- coda.samples(Rats_model, variable.names = c("deviance", "mu.alpha", "mu.beta","alpha","beta","sig","sig.alpha","sig.beta"), n.iter=1000)
+library(mcmcplots) #another way to plot output, more user-friendly, but inflexible. Annoying for large models.
+mcmcplot(full_coda) 
+```
+
+# This is the bgr (brooks-gelman-rubin) convergence diagnostic
+Want to be less than 1.2. But, doesn't work so well with large, complex models. Need to visually evaluate!!
+```{r}
+gelman.diag(full_coda)
+```
+
+
+#Summarize our model output and get posterior stats (means, sds, 95% CI)
+Note that this only summarizes parameters that you monitored (with the coda.samples() function above). If you forgot to monitor something.... need to start over with jags.model() step.
+```{r}
+table1=summary(full_coda)$stat
+table2=summary(full_coda)$quantiles
+outstats<-cbind(table2[,1],table1[,2],table2[,1],table2[,5])
+colnames(outstats)<-c("mean","sd","val2.5pc","val97.5pc")
+outstats
+```
