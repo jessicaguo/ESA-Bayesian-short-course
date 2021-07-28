@@ -26,7 +26,7 @@ Alternatively, launch a virtual RStudio session here:
 | 7:00 - 7:20  | Introductions and workshop overview  | Drew |
 | 7:20 - 7:55 | [Why Bayesian? An introduction and motivating example](https://docs.google.com/presentation/d/1xd1tajEZvIRrNZRlAdJ2UbikjKXJmL-BQE65OAdqk5o/edit?usp=sharing) | Jessica | 
 | 7:55 - 8:00  | BREAK  | |
-| 8:00 - 8:35  | Probability, Bayes' rule, and hierarchical modeling  | Bob |
+| 8:00 - 8:35  | [Probability, Bayes' rule, distributions, and hierarchical modeling](https://drive.google.com/file/d/1Gi07gSPtSk-npe7udICHvKskwZ2Olzzb/view?usp=sharing) | Bob |
 | 8:35 - 9:30 | Demonstration of a hierarchical regression: JAGS model code and diagnostics  | Drew |
 | 9:30 - 10:00  | BREAK  |  |
 | 10:00 - 10:10  | Description of datasets for group activity | Jessica |
