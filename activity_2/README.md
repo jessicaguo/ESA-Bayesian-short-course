@@ -1,5 +1,5 @@
 ## Overview 
-The goal of todayís hands-on activity is to allow you to explore Bayesian models. You are provided with a range of examples from which you can choose, based on your comfort level, experience, and interest. Work in groups to discuss the problem, program the model in R/JAGS, and troubleshoot issues that arise. Below are 6 example problems (A-F) that you can choose from. 
+The goal of today‚Äôs hands-on activity is to allow you to explore Bayesian models. You are provided with a range of examples from which you can choose, based on your comfort level, experience, and interest. Work in groups to discuss the problem, program the model in R/JAGS, and troubleshoot issues that arise. Below are 7 example problems that you can choose from. 
 
 ### Example Problems
 These are approximately ordered from simple to more challenging:
@@ -10,7 +10,7 @@ These are approximately ordered from simple to more challenging:
 
 3. Moths. Involves a logistic regression with a site random effect. Data are counts (number of moths removed by predators), and the probability of removal is modeled as a function of distance from the city. Different morphs (light vs dark colored moths) are expected to differ in how predation probability varies with distance. Addition of a site random effect can create an identifiability problem.
 
-4. SLA. Involves a series of meta-analysis models (simple to more complex) for specific leaf area (SLA) ìdataî obtained for the literature. The data are for 25 pine species occurring in the U.S., and the goal is to obtain standardized, 1-sided (projected) SLA for all species. Modifications to model involve accounting for sidedness (50% of data are missing), incorporating taxonomic relationships, and accounting for ìdataî uncertainty via reported (and missing) standard error and sample size information.
+4. SLA. Involves a series of meta-analysis models (simple to more complex) for specific leaf area (SLA) ‚Äúdata‚Äù obtained for the literature. The data are for 25 pine species occurring in the U.S., and the goal is to obtain standardized, 1-sided (projected) SLA for all species. Modifications to model involve accounting for sidedness (50% of data are missing), incorporating taxonomic relationships, and accounting for ‚Äúdata‚Äù uncertainty via reported (and missing) standard error and sample size information.
 
 5. Stomata. This involves a multiple regression analysis to quantify the environmental factors that affect maximum daily stomatal conductance in a desert shrub. Involves covariate centering and computing derived quantities such as the optimal temperature. Some calculus skills are required. Starter code is provided.
 
