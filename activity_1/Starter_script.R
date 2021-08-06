@@ -40,4 +40,8 @@ outstats<-cbind(table2[,1],table1[,2],table2[,1],table2[,5])
 colnames(outstats)<-c("mean","sd","val2.5pc","val97.5pc")
 outstats
 
+#compare parameter values
+library(mcmcplots)
+caterplot(full_coda, parms="alpha", quantiles=list(outer=c(0.025,0.975),inner=c(.25,.75)), greek=T)
+
 # The End #
