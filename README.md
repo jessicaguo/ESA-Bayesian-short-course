@@ -5,7 +5,7 @@ If you haven't already, please consider completing the [pre-workshop survey](htt
 
 We will collaboratively take notes [here](https://hackmd.io/4JyUE4X0QKyD8rlt9Oim5g?both). 
 
-Following the course, please consider completing the [post-workshop survey](https://docs.google.com/forms/d/1gr4ec4mCBnQwKOvl3hraqsb6_7sh3IdZRt7mH6ZvizM/edit?usp=sharing). We learn and improve from your feedback!
+Following the course, please consider completing the [post-workshop survey](https://docs.google.com/forms/d/e/1FAIpQLSdQCg61_v7pS-vGvjuEfCR7AzJXs6l4VXiZ0KC3HWTojmS0sA/viewform). We learn and improve from your feedback!
 
 ### Organizers
 [Drew Peltier](mailto:dmp334@nau.edu), Northern Arizona University
