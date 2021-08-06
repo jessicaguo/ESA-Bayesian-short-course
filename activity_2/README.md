@@ -16,7 +16,8 @@ These are approximately ordered from simple to more challenging:
 
 6. Roots. The goal is to estimate root density profiles for different deserts and/or vegetation types. Soil samples collected at 5 cm increments were measured for root biomass, but the small sample resulted in many zeros (no roots). Thus, root biomass is modeled in addition to detection errors, to account for the zero-inflated problem. Parameters may be modeled hierarchically by desert or vegetation type.
 
-7. Jackalopes. 
+7. Jackalopes. The goal of this problem is to develop a density-dependent population model for a mythical animal, the jackalope. This exercise includes both fitting process-based population models to data, as well as simulating multiple datasets to see under what conditions parameters are identifiable. Extra credit tasks include adding an observation model to the underlying process model to account for imperfect population counts. 
+
 
 ### Activities
 1. Draw a DAG for your problem/model.
