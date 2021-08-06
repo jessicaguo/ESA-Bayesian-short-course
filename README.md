@@ -1,9 +1,11 @@
 # ESA Bayesian short course
 This is the repo for Introduction to Bayesian and Hierarchical Bayesian Modeling Applications in Ecology, a short course offered at the 2021 Ecological Society of America Annual Meeting. We will convene on Friday, August 6th, 2021 from 7 AM to 1:30 PM Pacific Time. 
 
-If you haven't already, please consider completing the [pre-workshop survey](https://docs.google.com/forms/d/1TjvG_zAhbwoAcc1rD4YCDBpPzXKe-fGpVugXAuAxzB4/edit). 
+If you haven't already, please consider completing the [pre-workshop survey](https://docs.google.com/forms/d/1TjvG_zAhbwoAcc1rD4YCDBpPzXKe-fGpVugXAuAxzB4/edit?usp=sharing). 
 
 We will collaboratively take notes [here](https://hackmd.io/4JyUE4X0QKyD8rlt9Oim5g?both). 
+
+Following the coruse, please consider completing the [post-workshop survey](https://docs.google.com/forms/d/1gr4ec4mCBnQwKOvl3hraqsb6_7sh3IdZRt7mH6ZvizM/edit?usp=sharing). We learn and improve from your feedback!
 
 ### Organizers
 [Drew Peltier](mailto:dmp334@nau.edu), Northern Arizona University
