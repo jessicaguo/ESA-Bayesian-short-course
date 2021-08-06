@@ -33,6 +33,6 @@ Alternatively, launch a virtual RStudio session here:
 | 9:30 - 10:00  | BREAK  |  |
 | 10:00 - 10:10  | [Description of datasets for group activity](https://github.com/jessicaguo/ESA-Bayesian-short-course/tree/main/activity_2) | Jessica |
 | 10:10 - 12:40 | Working groups (form groups of 4-5 participants each)  | All |
-| 12:40 - 1:00  | [Discussion of group projects and different modelling approaches](https://drive.google.com/file/d/1L40IIk4MRx16DBCHAOlwDTnnyDa04tRp/view?usp=sharing)  | Drew |
+| 12:40 - 1:00  | [Discussion of group projects and different modelling approaches](https://docs.google.com/presentation/d/1MsdP1BzL1oTevZgUZlzQeAelxrInb9SxNL3Mq90PJYo/edit?usp=sharing)  | Drew |
 | 1:00 - 1:30  | Closing remarks and where to go from here: [further resources](https://docs.google.com/document/d/1_4Nox5Xaz_5vyRfzW7hhzAdEtOmyu1D0xf8__wVXsug/edit?usp=sharing), software options, and future possibilities  | Bob & Drew |
 
