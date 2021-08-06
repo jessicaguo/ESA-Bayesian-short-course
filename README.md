@@ -23,14 +23,14 @@ Alternatively, launch a virtual RStudio session here:
 ### Schedule
 | Time  | Topic/activity   |  Instructor	 |
 |---|---| ---|
-| 7:00 - 7:20  | Introductions and workshop overview  | Drew |
+| 7:00 - 7:20  | [Introductions and workshop overview](https://docs.google.com/presentation/d/1rcgMlvCOrUxvPRRsQWdv4tFNg6dsYuDwDnziMpuie0M/edit?usp=sharing)  | Drew |
 | 7:20 - 7:55 | [Why Bayesian? An introduction and motivating example](https://docs.google.com/presentation/d/1xd1tajEZvIRrNZRlAdJ2UbikjKXJmL-BQE65OAdqk5o/edit?usp=sharing) | Jessica | 
 | 7:55 - 8:00  | BREAK  | |
 | 8:00 - 8:35  | [Probability, Bayes' rule, distributions, and hierarchical modeling](https://docs.google.com/presentation/d/1LfxeoLwrc1k6CAcq1s9uJ-7rvQJ68hGm/edit?usp=sharing&ouid=115070288806854306118&rtpof=true&sd=true) | Bob |
-| 8:35 - 9:30 | Demonstration of a hierarchical regression: JAGS model code and diagnostics  | Drew |
+| 8:35 - 9:30 | [Demonstration of a hierarchical regression: JAGS model code and diagnostics](https://drive.google.com/file/d/1glrNCCI9b_oAVu4osVDybtODgUQdH3Hr/view)  | Drew |
 | 9:30 - 10:00  | BREAK  |  |
 | 10:00 - 10:10  | Description of datasets for group activity | Jessica |
 | 10:10 - 12:40 | Working groups (form groups of 4-5 participants each)  | All |
-| 12:40 - 1:00  | Discussion of group projects and different modelling approaches  | Drew |
+| 12:40 - 1:00  | [Discussion of group projects and different modelling approaches](https://drive.google.com/file/d/1L40IIk4MRx16DBCHAOlwDTnnyDa04tRp/view?usp=sharing)  | Drew |
 | 1:00 - 1:30  | Closing remarks and where to go from here: [further resources](https://docs.google.com/document/d/1_4Nox5Xaz_5vyRfzW7hhzAdEtOmyu1D0xf8__wVXsug/edit?usp=sharing), software options, and future possibilities  | Bob & Drew |
 
